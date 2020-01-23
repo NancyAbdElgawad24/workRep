@@ -1,0 +1,18 @@
+
+log4j.logger.assignmentDebugLogger=debug,debugLog
+
+
+log4j.logger.assignmentDebugLogger.type=debug
+log4j.additivity.debugLogger=false
+
+
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%d{ISO8601}{GMT+2} %-5p [%t][%C{1}:%c:%M(%L)] %m%n
+
+
+log4j.appender.debugLog=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.debugLog.File=assignment.log
+log4j.appender.debugLog.DatePattern='.'yyyy-MM-dd
+log4j.appender.debugLog.layout=org.apache.log4j.PatternLayout
+log4j.appender.debugLog.layout.ConversionPattern=%d{ISO8601}{GMT+2} %-5p [%t][%C{1}:%c:%M(%L)] %m%n
